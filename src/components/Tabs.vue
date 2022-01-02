@@ -34,7 +34,12 @@ export default {
   max-width: 200px;
   height: 30px;
   margin: 5px;
+  cursor: pointer;
   border-radius: 5px;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
   &__container {
     display: flex;
     align-items: center;

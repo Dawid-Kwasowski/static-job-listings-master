@@ -25,7 +25,12 @@
       </div>
       <div class="offer__horizontal-line"></div>
       <div class="offer__tags">
-        <Tabs v-for="(item, index) in filters" :key="index" :content="item" />
+        <Tabs
+          v-for="(item, index) in filters"
+          :key="index"
+          :content="item"
+          @click="addToFilters(item)"
+        />
       </div>
     </div>
   </div>
@@ -44,6 +49,11 @@ export default {
     filters() {
       const { languages, role, level, tools } = this.offer;
       return [role, level, languages, tools].flat();
+    },
+  },
+  methods: {
+    addToFilters(payload) {
+      return this.$emit("addToList", payload);
     },
   },
 };
@@ -131,7 +141,6 @@ $dark-grayish-cyan-color: hsl(180, 14%, 20%);
 .pills {
   display: flex;
   margin: 0 5px;
-  flex-wrap: wrap;
   &__pill {
     font-weight: 700;
     font-size: 18px;
