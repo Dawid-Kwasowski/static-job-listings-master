@@ -15,10 +15,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### [Look at my Work](https://lucid-hermann-c86a1c.netlify.app/)
