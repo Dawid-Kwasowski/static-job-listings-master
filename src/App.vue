@@ -57,7 +57,7 @@ export default {
     // get data from db and initialize them before app component was created
 
     return fetch(
-      `https://my-json-server.typicode.com/Dawid-Kwasowski/static-job-listings-master`
+      "https://my-json-server.typicode.com/Dawid-Kwasowski/static-job-listings-master/offers"
     )
       .then((response) => response.json())
       .then((data) => {
