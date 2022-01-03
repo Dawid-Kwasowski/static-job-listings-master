@@ -55,7 +55,10 @@ export default {
   // lifecycle methods
   beforeCreate() {
     // get data from db and initialize them before app component was created
-    return fetch("http://192.168.1.24:8081/offers")
+
+    return fetch(
+      `https://my-json-server.typicode.com/Dawid-Kwasowski/static-job-listings-master`
+    )
       .then((response) => response.json())
       .then((data) => {
         this.offers = data;
